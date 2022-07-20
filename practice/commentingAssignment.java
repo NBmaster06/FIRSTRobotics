@@ -41,6 +41,8 @@ public class Robot extends TimedRobot {
   //autonomousPeriodic is run every 20ms(default) during autonomous mode
   @Override
   public void autonomousPeriodic() {
+    //**Timer is not reset after each if statement block**
+    
     //robot drives for 2 seconds at half speed using the arcadeDrive
     //robot stops after 2 seconds and count is incremented
     if (count==0){
@@ -50,8 +52,8 @@ public class Robot extends TimedRobot {
         m_robotDrive.stopMotor(); 
         count++;
       }
-      //robot drives backward at half speed for 4 seconds using the arcadeDrive
-      //robot stops after 4 seconds and count is incremented
+      //robot drives backward at half speed for 2 seconds using the arcadeDrive
+      //robot stops after 2 seconds and count is incremented
     } else if (count==1){
       if (m_timer.get() < 4.0) {
         m_robotDrive.arcadeDrive(-0.5, 0.0); 
@@ -59,7 +61,7 @@ public class Robot extends TimedRobot {
         m_robotDrive.stopMotor(); 
         count++;
       }
-      //robot turns around the z-axis clockwise at a rotation rate of 0.5 for 6 seconds
+      //robot turns around the z-axis clockwise at a rotation rate of 0.5 for 2 seconds
       //robot stops and count is incremented
     } else if (count==2){
       if (m_timer.get() < 6.0) {
