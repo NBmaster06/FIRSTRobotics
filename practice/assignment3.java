@@ -44,16 +44,15 @@ public class Robot extends TimedRobot {
       else 
       {
         m_robotDrive.stopMotor(); 
+        //reseting timer for simplicity
+        m_timer.reset();
+        m_timer.start();
         count++;
       }
     }
     
     if(count == 1)
     {
-      //reseting timer for simplicity
-      m_timer.reset();
-      m_timer.start();
-
       if(m_timer.get() < 2.0)
       {
         m_robotDrive.arcadeDrive(-0.5, 0.0);
@@ -68,16 +67,15 @@ public class Robot extends TimedRobot {
       else
       {
         m_robotDrive.stopMotor();
+        //reseting timer for simplicity
+        m_timer.reset();
+        m_timer.start();
         count++;
       }
     }
 
     if(count == 2)
     {
-      //reseting timer for simplicity
-      m_timer.reset();
-      m_timer.start();
-
       if(m_timer.get() < 5.0)
       {
         m_robotDrive.arcadeDrive(0.5, 0.0);
@@ -85,16 +83,15 @@ public class Robot extends TimedRobot {
       else
       {
         m_robotDrive.stopMotor();
+        //reseting timer for simplicity
+        m_timer.reset();
+        m_timer.start();
         count++;
       }
     }
 
     if(count == 3)
     {
-      //reseting timer for simplicity
-      m_timer.reset();
-      m_timer.start();
-
       if(m_timer.get() < 1.0)
       {
         m_robotDrive.arcadeDrive(0.0, 0.5);
