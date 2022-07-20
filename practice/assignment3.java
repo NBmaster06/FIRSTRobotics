@@ -43,7 +43,6 @@ public class Robot extends TimedRobot {
       } 
       else 
       {
-        m_robotDrive.stopMotor(); 
         //reseting timer for simplicity
         m_timer.reset();
         m_timer.start();
@@ -66,7 +65,6 @@ public class Robot extends TimedRobot {
       }
       else
       {
-        m_robotDrive.stopMotor();
         //reseting timer for simplicity
         m_timer.reset();
         m_timer.start();
@@ -82,7 +80,6 @@ public class Robot extends TimedRobot {
       }
       else
       {
-        m_robotDrive.stopMotor();
         //reseting timer for simplicity
         m_timer.reset();
         m_timer.start();
