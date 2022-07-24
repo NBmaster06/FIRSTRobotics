@@ -78,8 +78,21 @@ public class Robot extends TimedRobot {
       }
       else
       {
-        m_robotDrive.stopMotor();
+        gyro.reset();
         m_intake.stopMotor();
+        count++;
+      }
+    }
+    //turning the robot to face the goal before shooter is started
+    else if(count == 3)
+    {
+      if(gyro.getAngle() < 90.0)
+      {
+        m_robotDrive.arcadeDrive(0.0, 0.5);
+      }
+      else 
+      {
+        m_robotDrive.stopMotor();
         count++;
       }
     }
